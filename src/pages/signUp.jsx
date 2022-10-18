@@ -29,7 +29,7 @@ const SignUpPage = () => {
       <ToastContainer />
       <img src={regImage} alt="movie" />
 
-      <div className="login__input">
+      <div className="signUp__input">
         <h1>Flixia!</h1>
 
         <form onSubmit={handleSubmit}>
@@ -48,7 +48,7 @@ const SignUpPage = () => {
             onChange={handleChange}
           />
 
-          <div className="login__flex">
+          <div className="signUp__flex">
             <input
               type={showPassword ? "text" : "password"}
               name="password"
@@ -59,8 +59,6 @@ const SignUpPage = () => {
             <p onClick={() => setShowPassword(!showPassword)}>
               {showPassword ? "hide" : "show"}
             </p>
-          </div>
-          <div className="login__flex">
             <input
               type={showPassword ? "text" : "password"}
               name="password"
@@ -68,16 +66,13 @@ const SignUpPage = () => {
               placeholder="Confirm Password"
               onChange={handleChange}
             />
-            <p onClick={() => setShowPassword(!showPassword)}>
-              {showPassword ? "hide" : "show"}
-            </p>
           </div>
           <button className="btn btn-sm">SIGN UP</button>
         </form>
 
         <div className="sign-up__footer">
           <p>
-            Already have an account. <Link to="/login">LOGIN</Link>
+            Already have an account? <Link to="/login">LOGIN</Link>
           </p>
         </div>
       </div>
